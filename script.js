@@ -47,8 +47,8 @@ function imprimeTitulo() {
   let pTitle = document.createElement('p');
   let textTitle = document.createTextNode(pregunta.titulo);
   form.setAttribute('id','contenedorPreguntas');
-  pTitle.appendChild(textTitle);
   form.appendChild(pTitle);
+  pTitle.appendChild(textTitle);
 };
 
 function imprimeTodasLasRespuestas() {
@@ -57,7 +57,6 @@ function imprimeTodasLasRespuestas() {
     let label = document.createElement('label');
     let labelText = document.createTextNode(pregunta.respuestas[i].label);
     label.setAttribute('for', pregunta.respuestas[i].id);
-    document.body.appendChild(form);
     form.appendChild(label);
     label.appendChild(labelText);
     // Input
